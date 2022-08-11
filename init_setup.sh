@@ -6,8 +6,9 @@ echo [$(date)]: "activate environment"
 source activate ./env
 echo [$(date)]: "install requirements"
 pip install -r requirements.txt
-#echo [$(date)]: "installing pytorch 1.8.1"
+echo [$(date)]: "installing pytorch 1.8.1"
 #conda install pytorch==1.8.1 cudatoolkit=11.3 -c pytorch -c conda-forge -y
+conda install pytorch==1.8.1 cpuonly -c pytorch -y
 echo [$(date)]: "END"
 # to remove everything -
 # rm -rf env/ .gitignore conda.yaml README.md .git/
